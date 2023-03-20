@@ -225,12 +225,13 @@ font-weight: 400;
         padding-bottom: 49px;
     }
     &__heading {
-        padding-bottom: 20px;
+        padding-bottom: 22px;
     }
     &__text {
         max-width: 1235px;
 
         &_additional {
+            padding-top: 9px;
         }
     }
     &__bottom {
@@ -273,6 +274,9 @@ font-weight: 400;
         letter-spacing: 0.12px;
 
         color: #FFFFFF;
+        &_mobile{
+            display: none;
+        }
     }
     &__btn {
         margin-bottom: 22px;
@@ -281,6 +285,9 @@ font-weight: 400;
         font-weight: 600;
         border: 3px solid #FF9900;
         background: transparent;
+        &_mobile{
+            display: none;
+        }
     }
     &__btn:hover {
         cursor: pointer;
@@ -292,6 +299,9 @@ font-weight: 400;
     &__btn:active{
         border: 3px solid $orangeColor3;
         background-color: $orangeColor3;
+    }
+    &__mobile-block{
+        display: none;
     }
     &__right {
         display: flex;
@@ -326,9 +336,6 @@ font-weight: 400;
         margin-left: 10px;
     }
     &__small-heading {
-    }
-    &__text_additional{
-        padding-top: 9px;
     }
 }
 .section-working {
@@ -436,6 +443,9 @@ font-weight: 400;
 
 }
 .section-faq {
+    br {
+        display: none;
+    }
     margin-bottom: 100px;
     &__container {
     }
@@ -806,6 +816,243 @@ font-weight: 400;
         }
         &__bottom {
             margin-bottom: 50px;
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 14px;
+    }
+    .heading {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .text {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .header {
+        margin-bottom: 30px;
+        &__logo {
+            margin: 23px 0;
+            max-width: 110px;
+            max-height: 35px;
+        }
+        &__right-part {
+            flex: 0 1 30%;
+        }
+
+    }
+    .section-hero {
+        margin-bottom: 60px;
+        &__body {
+            max-height: 308px;
+            min-height: 100%;
+
+            padding: 60px 21px 15px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            background: url('/img/media-320/hero-slider1.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        &__heading {
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+        }
+        &__description {
+            padding: 8px 0 32px;
+            max-width: 247px;
+
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+        }
+        &__btn {
+            padding: 13px 28px;
+
+            font-size: 12px;
+            line-height: 15px;
+
+            border-radius: 8px;
+        }
+        &__nav {
+            padding-top: 34px;
+        }
+        &__swicth{
+            max-width: 10px;
+            max-height: 10px;
+        }
+    }
+    .section-about {
+        margin-bottom: 61px;
+        br {
+            display: none;
+        }
+        &__top {
+            padding: 0 0 14px;
+        }
+        &__heading{
+            padding-bottom: 20px;
+        }
+        &__text {
+            padding-right: 0;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 28px;
+
+        }
+        &__left {
+            margin-bottom: 8px;
+            min-height: 200px;
+
+            border-radius: 16px;
+        }
+        &__inside-part {
+            display: none;
+        }
+        &__mobile-block{
+            display: block;
+        }
+        &__description {
+            margin-bottom: 12px;
+
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 28px;
+            color: #000000;
+        }
+        &__btn {
+            padding: 12px 44px;
+
+            font-size: 12px;
+            line-height: 15px;
+
+            color: $orangeColor1;
+            border-radius: 8px;
+        }
+        &__right {
+            padding: 0;
+        }
+        &__block {
+            margin: 0;
+            padding: 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+            border: none;
+        }
+        &__img {
+            max-width: 80px;
+            margin-right: 20px;
+        }
+        &__info {
+            margin: 0;
+        }
+        &__small-heading {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+
+        }
+    }
+    .section-working {
+        &__list {
+            padding: 20px 0 16px;
+        }
+        &__item {
+            flex: 0 1 15%;
+        }
+        &__link {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &__right {
+            //margin-top: 0;
+            margin-bottom: 16px;
+            min-height: 160px;
+            //max-width: 668px;
+            background: url('../../img/media-320/working-step1.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 16px;
+        }
+        &__small-heading {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 32px;
+        }
+        &__text{
+            padding: 8px 0 25px;
+        }
+        &__control-buttons{
+            justify-content: space-between;
+        }
+        &__btn {
+            margin: 0;
+            padding: 12px 44px;
+
+            font-size: 12px;
+            line-height: 15px;
+            border-radius: 8px;
+            &_additional {
+                padding: 12px 32px;
+
+            }
+        }
+    }
+    .section-faq {
+        margin-bottom: 60px;
+        br {
+            display: block;
+        }
+        &__heading {
+            padding-bottom: 16px;
+        }
+        &__small-heading {
+            flex: 0 0 85%;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        &__expand {
+            flex: 0 0 15%;
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .footer {
+        &__container {
+            margin-top: 33px;
+        }
+        &__center {
+            padding-bottom: 16px;
+            border-bottom: 1px solid $grayColor5;
+        }
+        &__input {
+            min-width: 290px;
+        }
+        &__btn {
+            padding: 12px 28px;
+            border-radius: 8px;
+        }
+        &__left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //justify-content: center;
+        }
+        &__logo {
+            padding: 16px 0;
+            width: 131px;
+        }
+        &__soc-log {
+            margin-right: 16px;
+            width: 40px;
         }
     }
 }
