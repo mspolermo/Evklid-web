@@ -790,6 +790,10 @@ body {
     display: block;
     fill: #000000;
   }
+  .header__logo {
+    max-width: 150px;
+    margin-top: 26px;
+  }
   .header__center-part {
     display: none;
   }
