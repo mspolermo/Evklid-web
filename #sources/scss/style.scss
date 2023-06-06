@@ -247,6 +247,7 @@ font-weight: 400;
         background: url(/img/about-background.jpg) no-repeat center center;
         background-size: cover;
         border-radius: 32px;
+        transform: translateY(-2px);
     }
     &__inside-part {
         position: absolute;
@@ -397,7 +398,7 @@ font-weight: 400;
     &__btn {
         margin-right: 30px;
         background: #FF9900;
-        transform: translateY(-1px);
+        transform: translateY(-3px);
         &_additional{
             font-weight: 500;
             font-size: 16px;
@@ -432,6 +433,7 @@ font-weight: 400;
         background: url('../../img/working-step1.jpg') no-repeat center center;
         background-size: cover;
         border-radius: 32px;
+        transform: translateY(-3px);
     }
 
 }
@@ -439,7 +441,7 @@ font-weight: 400;
     br {
         display: none;
     }
-    margin-bottom: 100px;
+    margin-bottom: 98px;
     &__container {
     }
     &__heading {
@@ -668,6 +670,7 @@ font-weight: 400;
             margin-right: 0;
             margin-bottom: 32px;
             min-height: 640px;
+            transform: translateY(1px);
         }
         &__inside-part {
             padding: 40px 50px 28px 50px;
@@ -676,10 +679,19 @@ font-weight: 400;
             max-width: 100%;
             margin-right: 0;
         }
+        &__block {
+            justify-content: center;
+        }
         &__img {
+            margin-left: -16px;
+            margin-right: 50px;
+            flex: 1 1 30%;
         }
         &__info {
-            transform: translateX(-20px);
+            flex: 1 0 70%;
+            transform: translateX(0);
+            margin-left: 0;
+
         }
     }
     .section-working {
@@ -728,7 +740,8 @@ font-weight: 400;
             margin-right: 10px;
         }
         &__center {
-            flex: 0 1 59%;
+            flex: 0 1 60%;
+            margin-right: 0;
         }
         &__right {
             display: none;
@@ -736,31 +749,44 @@ font-weight: 400;
         &__btn{
             padding-left: 40px;
             padding-right: 37px;
-            transform: translateX(10px);
+            transform: translate(2px, 1px);
         }
     }
 }
 @media (max-width: 768px) {
+    .header{
+        margin-top: -2px;
+        margin-bottom: 39px;
+        &__left-part{
+            flex: 1 1 40%;
+            transform: translateY(1px);
+        }
+        &__logo {
+            margin-top: 18px;
+            margin-bottom: 5px;
+            transform: translate(-3px, -4px);
+        }
+        &__icon-search{
+            transform: translateY(2px);
+        }
+    }
     .section-hero {
-        margin-bottom: 35px;
+        margin-bottom: 36px;
         &__body {
-            //min-height: 668px;
-            //height: 100%;
             padding: 160px 40px 16px;
-            //width: 100%;
-            //min-width: 924px;
             background: url(/img/media-768/hero-slider1.jpg) no-repeat center center;
             background-size: cover;
+            min-height: 662px !important;
+            transform: translateY(1px);
+            border-radius: 22px;
         }
         &__heading {
         font-size: 50px;
-        //font-weight: 800;
         line-height: 61px;
         //letter-spacing: 0.4px;
         }
         &__description {
             max-width: 590px;
-            //padding: 16px 0 60px;
             font-size: 18px;
             line-height: 22px;
         }
@@ -773,41 +799,72 @@ font-weight: 400;
     }
     .section-about {
         margin-bottom: 80px;
+        &__top {
+            padding-bottom: 51px;
+        } 
+        &__left {
+            min-height: 652px;
+            transform: translateY(0);
+            border-radius: 24px;
+        }
         &__inside-part {
-            padding: 34px 40px;
+            padding: 16px 40px;
+            border-radius: 24px;
         }
         &__description {
             padding-bottom: 0;
             max-width: 366px;
+            transform: translateY(-16px);
+        }
+        &__btn {
+            transform: translateY(-4px);
         }
         &__block {
-            //flex-wrap: nowrap;
-            padding: 35px 46px 35px 40px;
-            min-height: 295px;
+            padding: 24px 6px 28px 40px;
+            min-height: 236px !important;
+            justify-content:unset;
+            border-radius: 22px;
         }
         &__img {
+            margin-left: 0;
             max-width: 114px;
+            margin-right: 12px;
+            flex: 1 1 30%;
         }
         &__info {
-            flex: 3 1 72%;
+
+            flex: 1 1 70%;
             max-width: 452px;
-            margin-left: 16px;
+            margin-left: 0;
+            transform: translateX(0);
         }
-        &__text_additional{
-            padding-top: 8px;
+        &__small-heading{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
         }
+        &__text{
+            padding-right: 0;
+            &_additional{
+                padding-top: 8px;
+                font-size: 16px;
+                line-height: 32px;
+            }    
+        }
+        
     }
     .section-working {
-        margin-bottom: 49px;
+        margin-bottom: 48px;
         br {
             display: none;
         }
         &__list {
+            padding-bottom: 50px;
             max-width: 100%;
-            justify-content: space-between;
+            justify-content: space-between !important;
         }
         &__text{
-            padding-bottom: 20;
+            padding-bottom: 2px;
         }
         &__btn {
             margin-top: 25px;
@@ -819,28 +876,55 @@ font-weight: 400;
         }    
         &__right {
             margin-top: 0;
-            margin-bottom: 38px;
-            min-height: 284px;
+            margin-bottom: 34px;
+            min-height: 286px;
             max-width: 668px;
             background: url('../../img/media-768/working-step1.jpg') no-repeat center center;
             background-size: cover;
+            border-radius: 24px;
         }
         &__item {
-            flex: 0 0 10%;
+            flex: 1 1 25% !important;
+            transform: translateX(0) !important;
+            max-width: 53px;
+            &_first {
+                transform: translateX(0);
+            }
+        }
+    }
+    .section-faq {
+        margin-bottom: 114px;
+        &__expand {
+            flex: 0 0 7%;
+            &_third {
+                transform: translateY(-6px);
+            }
+            &_fifth {
+                transform: translateY(-4px);
+            }
         }
     }
     .footer {
         &__container{
             flex-direction: column-reverse;
+            transform: translateX(-10px);
         }
         &__list {
             display: none;
         }
         &__form {
             min-width: 0;
+            width: 81%;
         }
         &__bottom {
             margin-bottom: 50px;
+        }
+        &__btn {
+            transform: translateX(-1px);
+            margin-bottom: 48px;
+        }
+        &__left {
+            transform: translateX(10px);
         }
     }
 }
