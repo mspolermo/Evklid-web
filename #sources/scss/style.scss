@@ -154,7 +154,6 @@ font-weight: 400;
 }
 .section-hero {
     margin-bottom: 50px;
-
     &__container {
     }
     &__body {
@@ -237,7 +236,6 @@ font-weight: 400;
     &__bottom {
         display: flex;
         justify-content: space-between;
-        //flex-wrap: wrap;
     }
     &__left {
         position: relative;
@@ -315,7 +313,6 @@ font-weight: 400;
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
-        //padding: 20px 50px 20px 11px;
         padding: 20px 76px 20px 18px;
         min-height: 295px;
 
@@ -351,7 +348,6 @@ font-weight: 400;
     }
     &__list {
         display: flex;
-        //max-width: 32.7%;
         max-width: 587px;
         padding: 50px 0 46px 0px;
     }
@@ -388,8 +384,6 @@ font-weight: 400;
         justify-content: space-between;
         flex: 0 0 49%;
         max-width: 758px;
-        //max-width: 758px;
-        //min-height: 460px;
     }
     &__small-heading {
     line-height: 32px;
@@ -430,7 +424,6 @@ font-weight: 400;
         }
     }
     &__right {
-        //align-self: self-end;
         flex: 0 1 50%;
         max-width: 870px;
         width: 100%;
@@ -483,9 +476,7 @@ font-weight: 400;
         
     }
     &__left {
-        //margin-right: 15px;
         flex: 0 1 32%;
-        // padding-right: 350px;
     }
     &__logo {
         padding: 0 0 20px;
@@ -533,12 +524,11 @@ font-weight: 400;
     }
 
     &__center {
+        transform: translateX(10px);
+        margin-right: 20px;
         flex: 0 1 42%;
         display: flex;
         flex-direction: column;
-        //justify-content: center;
-        //align-items: center;
-        //margin-left: 26px;
     }
     &__header {
         padding: 0 0 25px 0;
@@ -603,22 +593,27 @@ font-weight: 400;
 }
 
 @media (max-width: 1024px) {
+    
     .container {
         max-width: 1024px;
         padding-left: 50px;
         padding-right: 50px;
     }
     .header{
+        margin-bottom: 40px;
         &__left-part{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex: 1 1 33%;
         }
         &__icon-burger{
-        display: block;
-        fill:$grayColor6;
+            display: block;
+            fill:$grayColor6;
+
         }
         &__logo {
+            margin: 26px 0;
             max-width: 150px;
             margin-top: 26px;
         }
@@ -627,12 +622,11 @@ font-weight: 400;
         }
     }
     .section-hero {
+        margin-bottom: 34px;
         &__body {
             min-height: 668px;
             height: 100%;
             padding: 160px 77px 28px;
-            //width: 100%;
-            //min-width: 924px;
             background: url(/img/media-1024/hero-slider1.jpg) no-repeat center center;
             background-size: cover;
         }
@@ -656,20 +650,24 @@ font-weight: 400;
         }
     }
     .section-about {
+        margin-bottom: 82px;
         &__text {
             padding-right: 10px;
-            //max-width: 924px;
+        }
+        &__top {
+            padding-bottom: 58px;
         }    
+        &__inside-part {
+            padding-top: 52px !important;
+        }
         &__bottom {
             flex-direction: column;
-            
-            //justify-content: space-between;
-            //flex-wrap: wrap;
         }
         &__left {
             max-width: 100%;
             margin-right: 0;
             margin-bottom: 32px;
+            min-height: 640px;
         }
         &__inside-part {
             padding: 40px 50px 28px 50px;
@@ -678,16 +676,29 @@ font-weight: 400;
             max-width: 100%;
             margin-right: 0;
         }
+        &__img {
+        }
+        &__info {
+            transform: translateX(-20px);
+        }
     }
     .section-working {
+        margin-bottom: 80px;
         &__list {
+            padding-bottom: 52px;
             max-width: 65%;
+        }
+        &__item {
+            transform: translateX(-6px);
+            &_first {
+                transform: translateX(2px);
+            }
         }
         &__text{
             padding-bottom: 20;
         }
         &__btn {
-            margin-top: 25px;
+            margin-top: 6px;
         }
         &__right {
             max-width: 437px;
@@ -698,6 +709,11 @@ font-weight: 400;
     }
     .section-faq  {
         margin-bottom: 80px;
+        &__topic {
+            //padding-top: 10px;
+            //min-height: 100px;
+            padding: 29px 0;
+        }
         &__small-heading {
             max-width: 756px;
             font-size: 20px;
@@ -712,10 +728,15 @@ font-weight: 400;
             margin-right: 10px;
         }
         &__center {
-            flex: 0 1 60%;
+            flex: 0 1 59%;
         }
         &__right {
             display: none;
+        }
+        &__btn{
+            padding-left: 40px;
+            padding-right: 37px;
+            transform: translateX(10px);
         }
     }
 }
