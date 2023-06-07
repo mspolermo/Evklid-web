@@ -332,6 +332,12 @@ body {
 .section-about__text {
   max-width: 1235px;
 }
+.section-about__text_desktop {
+  display: block;
+}
+.section-about__text_mobile {
+  display: none;
+}
 .section-about__text_additional {
   padding-top: 9px;
 }
@@ -537,6 +543,12 @@ body {
 .section-working__text {
   padding: 8px 0 18px;
   max-width: 758px;
+}
+.section-working__text_desktop {
+  display: block;
+}
+.section-working__text_mobile {
+  display: none;
 }
 .section-working__btn {
   margin-right: 30px;
@@ -1156,8 +1168,7 @@ body {
 @media (max-width: 320px) {
   .container {
     max-width: 100%;
-    padding-left: 15px;
-    padding-right: 14px;
+    padding: 0 14px 0 15px;
   }
   .heading {
     font-size: 24px;
@@ -1169,23 +1180,35 @@ body {
   }
   .header {
     margin-bottom: 30px;
+    border-radius: 18px;
+  }
+  .header__left-part {
+    -webkit-transform: translateY(0x);
+            transform: translateY(0x);
   }
   .header__logo {
-    margin: 23px 0;
+    margin: 23px 0 13px;
     max-width: 110px;
     max-height: 35px;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
   }
   .header__right-part {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 30%;
             flex: 0 1 30%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   .section-hero {
     margin-bottom: 60px;
   }
   .section-hero__body {
-    max-height: 308px;
-    min-height: 100%;
+    max-height: auto;
+    min-height: 310px;
+    min-height: 100% !important;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     padding: 60px 21px 15px 22px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1197,8 +1220,9 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: url("/img/media-320/hero-slider1.jpg") no-repeat center center;
+    background: url(/img/media-320/hero-slider1.jpg) no-repeat center center;
     background-size: cover;
+    border-radius: 14px;
   }
   .section-hero__heading {
     font-weight: 800;
@@ -1245,6 +1269,12 @@ body {
     font-size: 14px;
     line-height: 28px;
   }
+  .section-about__text_desktop {
+    display: none;
+  }
+  .section-about__text_mobile {
+    display: block;
+  }
   .section-about__left {
     margin-bottom: 8px;
     min-height: 200px;
@@ -1255,19 +1285,21 @@ body {
   }
   .section-about__mobile-block {
     display: block;
+    padding-top: 16px;
   }
   .section-about__description {
-    margin-bottom: 12px;
     font-weight: 400;
     font-size: 14px;
     line-height: 28px;
     color: #000000;
   }
   .section-about__btn {
-    padding: 12px 44px;
+    margin-bottom: 27px;
+    padding: 10px 42px;
     font-size: 12px;
     line-height: 15px;
     color: #FF9900;
+    border-width: 2px;
     border-radius: 8px;
   }
   .section-about__right {
@@ -1285,8 +1317,9 @@ body {
     border: none;
   }
   .section-about__img {
-    max-width: 80px;
-    margin-right: 20px;
+    margin-left: -3px;
+    max-width: 68px;
+    margin-right: 40px;
   }
   .section-about__info {
     margin: 0;
@@ -1296,24 +1329,25 @@ body {
     font-size: 18px;
     line-height: 22px;
   }
+  .section-working {
+    margin-bottom: 45px;
+  }
   .section-working__list {
-    padding: 20px 0 16px;
+    padding: 20px 0 18px;
   }
   .section-working__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 15%;
-            flex: 0 1 15%;
+    max-width: 42px;
   }
   .section-working__link {
     font-size: 14px;
     line-height: 17px;
   }
   .section-working__right {
-    margin-bottom: 16px;
+    margin-bottom: 13px;
     min-height: 160px;
     background: url("../../img/media-320/working-step1.jpg") no-repeat center center;
     background-size: cover;
-    border-radius: 16px;
+    border-radius: 14px;
   }
   .section-working__small-heading {
     font-weight: 600;
@@ -1321,22 +1355,37 @@ body {
     line-height: 32px;
   }
   .section-working__text {
-    padding: 8px 0 25px;
+    padding: 8px 0 28px;
+  }
+  .section-working__text_desktop {
+    display: none;
+  }
+  .section-working__text_mobile {
+    display: block;
   }
   .section-working__control-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .section-working__btn {
     margin: 0;
-    padding: 12px 44px;
+    margin-bottom: 10px;
+    padding: 13px 44px;
     font-size: 12px;
     line-height: 15px;
     border-radius: 8px;
   }
   .section-working__btn_additional {
-    padding: 12px 32px;
+    font-size: 12px;
+    padding: 10px 31px 9px 32px;
+    -webkit-transform: translate(0px, -3px);
+            transform: translate(0px, -3px);
   }
   .section-faq {
     margin-bottom: 60px;
@@ -1354,29 +1403,68 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
+    letter-spacing: 0.05px;
   }
   .section-faq__expand {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 15%;
             flex: 0 0 15%;
+    min-width: 30px;
     width: 30px;
     height: 30px;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
   .footer__container {
-    margin-top: 33px;
+    margin-top: 0;
+    padding: 32px 14px 0;
   }
   .footer__center {
     padding-bottom: 16px;
     border-bottom: 1px solid #414141;
   }
+  .footer__header {
+    padding-bottom: 22px;
+  }
+  .footer__form {
+    width: 100%;
+    min-width: none;
+    margin-right: 0;
+  }
   .footer__input {
-    min-width: 290px;
+    min-width: auto;
+  }
+  .footer__input_big {
+    margin-bottom: 24px;
+  }
+  .footer__input::-webkit-input-placeholder {
+    padding-left: 14px;
+    font-size: 14px;
+  }
+  .footer__input::-moz-placeholder {
+    padding-left: 14px;
+    font-size: 14px;
+  }
+  .footer__input:-ms-input-placeholder {
+    padding-left: 14px;
+    font-size: 14px;
+  }
+  .footer__input::-ms-input-placeholder {
+    padding-left: 14px;
+    font-size: 14px;
+  }
+  .footer__input::placeholder {
+    padding-left: 14px;
+    font-size: 14px;
   }
   .footer__btn {
-    padding: 12px 28px;
+    margin-bottom: 0;
+    padding: 10px 27px;
+    font-size: 12px;
     border-radius: 8px;
   }
   .footer__left {
+    margin-right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1389,11 +1477,14 @@ body {
             align-items: center;
   }
   .footer__logo {
-    padding: 16px 0;
+    padding: 16px 0 6px;
     width: 131px;
   }
   .footer__soc-log {
-    margin-right: 16px;
+    margin-right: 10px;
     width: 40px;
+  }
+  .footer__soc-log_vk {
+    margin-right: 0;
   }
 }

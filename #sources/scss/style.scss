@@ -228,7 +228,12 @@ font-weight: 400;
     }
     &__text {
         max-width: 1235px;
-
+        &_desktop {
+            display: block;
+        }
+        &_mobile {
+            display: none;
+        }
         &_additional {
             padding-top: 9px;
         }
@@ -392,6 +397,12 @@ font-weight: 400;
     &__text {
         padding: 8px 0 18px;
         max-width: 758px;
+        &_desktop{
+            display: block;
+        }
+        &_mobile {
+            display: none;
+        }
     }
     &__control-buttons {
     }
@@ -928,11 +939,13 @@ font-weight: 400;
         }
     }
 }
+@media (max-width: 576px) {
+
+}
 @media (max-width: 320px) {
     .container {
         max-width: 100%;
-        padding-left: 15px;
-        padding-right: 14px;
+        padding: 0 14px 0 15px;
     }
     .heading {
         font-size: 24px;
@@ -944,29 +957,38 @@ font-weight: 400;
     }
     .header {
         margin-bottom: 30px;
+        border-radius: 18px;
+        &__left-part{
+            transform: translateY(0x);
+        }
         &__logo {
-            margin: 23px 0;
+            margin: 23px 0 13px;
             max-width: 110px;
             max-height: 35px;
+            transform: translateY(-4px);
         }
         &__right-part {
             flex: 0 1 30%;
+            transform: translateY(0px);
         }
-
     }
     .section-hero {
         margin-bottom: 60px;
         &__body {
-            max-height: 308px;
-            min-height: 100%;
+            max-height: auto;
+            min-height: 310px;
+            min-height: 100% !important;
+            transform: translateY(0px);
 
             padding: 60px 21px 15px 22px;
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            background: url('/img/media-320/hero-slider1.jpg') no-repeat center center;
+            background: url(/img/media-320/hero-slider1.jpg) no-repeat center center;
             background-size: cover;
+
+            border-radius: 14px;
         }
         &__heading {
             font-weight: 800;
@@ -1012,10 +1034,16 @@ font-weight: 400;
         }
         &__text {
             padding-right: 0;
+
             font-weight: 300;
             font-size: 14px;
             line-height: 28px;
-
+            &_desktop {
+                display: none;
+            }
+            &_mobile {
+                display: block;
+            }
         }
         &__left {
             margin-bottom: 8px;
@@ -1028,22 +1056,23 @@ font-weight: 400;
         }
         &__mobile-block{
             display: block;
+            padding-top: 16px;
         }
         &__description {
-            margin-bottom: 12px;
-
             font-weight: 400;
             font-size: 14px;
             line-height: 28px;
             color: #000000;
         }
         &__btn {
-            padding: 12px 44px;
+            margin-bottom: 27px;
+            padding: 10px 42px;
 
             font-size: 12px;
             line-height: 15px;
 
             color: $orangeColor1;
+            border-width: 2px;
             border-radius: 8px;
         }
         &__right {
@@ -1057,8 +1086,9 @@ font-weight: 400;
             border: none;
         }
         &__img {
-            max-width: 80px;
-            margin-right: 20px;
+            margin-left: -3px;
+            max-width: 68px;
+            margin-right: 40px;
         }
         &__info {
             margin: 0;
@@ -1067,28 +1097,27 @@ font-weight: 400;
             font-weight: 600;
             font-size: 18px;
             line-height: 22px;
-
         }
     }
     .section-working {
+        margin-bottom: 45px;
         &__list {
-            padding: 20px 0 16px;
+            padding: 20px 0 18px ;
         }
         &__item {
-            flex: 0 1 15%;
+            max-width: 42px;
         }
         &__link {
             font-size: 14px;
             line-height: 17px;
         }
         &__right {
-            //margin-top: 0;
-            margin-bottom: 16px;
+            margin-bottom: 13px;
             min-height: 160px;
-            //max-width: 668px;
+
             background: url('../../img/media-320/working-step1.jpg') no-repeat center center;
             background-size: cover;
-            border-radius: 16px;
+            border-radius: 14px;
         }
         &__small-heading {
             font-weight: 600;
@@ -1096,21 +1125,32 @@ font-weight: 400;
             line-height: 32px;
         }
         &__text{
-            padding: 8px 0 25px;
+            padding: 8px 0 28px;
+            &_desktop{
+                display: none;
+            }
+            &_mobile {
+                display: block;
+            }
         }
         &__control-buttons{
+            display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         &__btn {
             margin: 0;
-            padding: 12px 44px;
+            margin-bottom: 10px;
+            padding: 13px 44px;
 
             font-size: 12px;
             line-height: 15px;
             border-radius: 8px;
+            
             &_additional {
-                padding: 12px 32px;
-
+                font-size: 12px;
+                padding: 10px 31px 9px 32px;
+                transform: translate(0px, -3px);
             }
         }
     }
@@ -1124,44 +1164,70 @@ font-weight: 400;
         }
         &__small-heading {
             flex: 0 0 85%;
+
             font-weight: 500;
             font-size: 14px;
             line-height: 24px;
+            letter-spacing: 0.05px;
         }
         &__expand {
             flex: 0 0 15%;
+            min-width: 30px;
             width: 30px;
             height: 30px;
+            transform: translateX(10px);
         }
     }
     .footer {
         &__container {
-            margin-top: 33px;
+            margin-top: 0;
+            padding: 32px 14px 0;
         }
         &__center {
             padding-bottom: 16px;
             border-bottom: 1px solid $grayColor5;
         }
+        &__header {
+            padding-bottom: 22px;
+        }
+        &__form {
+            width: 100%;
+            min-width: none;
+            margin-right: 0;
+        }
         &__input {
-            min-width: 290px;
+            min-width: auto;
+            &_big{
+                margin-bottom: 24px;
+            }
+            &::placeholder {
+                padding-left: 14px;
+                font-size: 14px;
+            }
         }
         &__btn {
-            padding: 12px 28px;
+            margin-bottom: 0;
+            padding: 10px 27px;
+
+            font-size: 12px;
             border-radius: 8px;
         }
         &__left {
+            margin-right: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            //justify-content: center;
         }
         &__logo {
-            padding: 16px 0;
+            padding: 16px 0 6px;
             width: 131px;
         }
         &__soc-log {
-            margin-right: 16px;
+            margin-right: 10px;
             width: 40px;
+            &_vk {
+                margin-right: 0;
+            }
         }
     }
 }
