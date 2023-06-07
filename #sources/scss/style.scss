@@ -35,15 +35,15 @@ font-weight: 400;
 
     color: #FFFFFF;
     border-radius: 16px;
-}
-.btn:hover{
-    background: $orangeColor2
-}
-.btn:focus {
-    background: $orangeColor2
-}
-.btn:active {
-    background: $orangeColor3
+    &:hover{
+        background: $orangeColor2
+    }
+    &:focus {
+        background: $orangeColor2
+    }
+    &:active {
+        background: $orangeColor3
+    }
 }
 .heading {
     font-weight: 400;
@@ -83,17 +83,17 @@ font-weight: 400;
     }
     &__icon-burger{
         display: none;
-    }
-    &__icon-burger:hover{
-        cursor: pointer;
-    }
-    &__icon-burger:focus{
-        padding: 1px;
-        border: 2px solid $orangeColor1;
-    }
-    &__icon-burger:active {
-        border: none;
-        fill: $orangeColor3
+        &:hover{
+            cursor: pointer;
+        }
+        &:focus{
+            padding: 1px;
+            border: 2px solid $orangeColor1;
+        }
+        &:active {
+            border: none;
+            fill: $orangeColor3
+        }
     }
     &__logo {
         margin: 14px 0;
@@ -114,19 +114,19 @@ font-weight: 400;
         font-size: 18px;
         line-height: 22px;
 
-        color: #000000;     
-    }
-    &__link:hover {
-    border-bottom: 2px solid $orangeColor1;
-    }
-    &__link:focus {
-        padding: 0 2px;
-        border: 2px solid $orangeColor1;
-    }
-    &__link:active {
-        color: $orangeColor3;
-        border: 0;
-        border-bottom: 2px solid $orangeColor3;
+        color: #000000;
+        &:hover {
+            border-bottom: 2px solid $orangeColor1;
+        }
+        &:focus {
+            padding: 0 2px;
+            border: 2px solid $orangeColor1;
+        }
+        &:active {
+            color: $orangeColor3;
+            border: 0;
+            border-bottom: 2px solid $orangeColor3;
+        }     
     }
     &__right-part {
         flex: 1 1 16%;
@@ -137,19 +137,17 @@ font-weight: 400;
         stroke-width: 2; 
 
         float: right;
-    }
-    &__icon-search:hover {
-        cursor: pointer;
-        stroke: $orangeColor1;
-
-    }
-    &__icon-search:focus{
-        outline: 2px solid $orangeColor1;;
-
-    }
-    &__icon-search:active{
-        outline:none;
-        stroke: $orangeColor1;
+        &:hover {
+            cursor: pointer;
+            stroke: $orangeColor1;
+        }
+        &:focus{
+            outline: 2px solid $orangeColor1;;
+        }
+        &:active{
+            outline:none;
+            stroke: $orangeColor1;
+        }
     }
 }
 .section-hero {
@@ -216,8 +214,7 @@ font-weight: 400;
 }
 .section-about {
     margin-bottom: 100px;
-    &__container {
-        
+    &__container { 
     }
     &__top {
         padding-top: 1px;
@@ -292,17 +289,17 @@ font-weight: 400;
         &_mobile{
             display: none;
         }
-    }
-    &__btn:hover {
-        cursor: pointer;
-        background-color: $orangeColor1;
-    }
-    &__btn:focus {
-        background-color: $orangeColor1;
-    }
-    &__btn:active{
-        border: 3px solid $orangeColor3;
-        background-color: $orangeColor3;
+        &:hover {
+            cursor: pointer;
+            background-color: $orangeColor1;
+        }
+        &:focus {
+            background-color: $orangeColor1;
+        }
+        &:active{
+            border: 3px solid $orangeColor3;
+            background-color: $orangeColor3;
+        }
     }
     &__mobile-block{
         display: none;
@@ -367,22 +364,21 @@ font-weight: 400;
         &_active {
             color: $orangeColor3;
         }
-    }
-    &__link:hover{
-        color: $orangeColor1;
-    }
-    &__link:focus{
-        padding: 2px;
-        border: 2px solid $orangeColor1;
-    }
-    &__link:active{
-        border:none;
-        color: $orangeColor3;
+        &:hover{
+            color: $orangeColor1;
+        }
+        &:focus{
+            padding: 2px;
+            border: 2px solid $orangeColor1;
+        }
+        &:active{
+            border:none;
+            color: $orangeColor3;
+        }
     }
     &__bottom {
         display: flex;
         justify-content: space-between;
-
     }
     &__left {
         display: flex;
@@ -392,7 +388,7 @@ font-weight: 400;
         max-width: 758px;
     }
     &__small-heading {
-    line-height: 32px;
+        line-height: 32px;
     }
     &__text {
         padding: 8px 0 18px;
@@ -417,22 +413,22 @@ font-weight: 400;
 
             border: 1px solid $grayColor6;
             color: $grayColor6;
-            background: transparent;
-        }
-        &_additional:hover {
-            background-color: $grayColor4;
-            border: 1px solid $grayColor4;
-            color: $grayColor1;
-        }
-        &_additional:focus {
-            background-color: $grayColor4;
-            border: 1px solid $grayColor4;
-            color: $grayColor1;
-        }
-        &_additional:active {
-            background-color: $grayColor6;
-            border: 1px solid $grayColor6;
-            color: $grayColor1;
+            background: transparent;     
+            &:hover {
+                background-color: $grayColor4;
+                border: 1px solid $grayColor4;
+                color: $grayColor1;
+            }
+            &:focus {
+                background-color: $grayColor4;
+                border: 1px solid $grayColor4;
+                color: $grayColor1;
+            }
+            &:active {
+                background-color: $grayColor6;
+                border: 1px solid $grayColor6;
+                color: $grayColor1;
+            }
         }
     }
     &__right {
@@ -446,13 +442,12 @@ font-weight: 400;
         border-radius: 32px;
         transform: translateY(-3px);
     }
-
 }
 .section-faq {
+    margin-bottom: 98px;
     br {
         display: none;
     }
-    margin-bottom: 98px;
     &__container {
     }
     &__heading {
@@ -480,7 +475,6 @@ font-weight: 400;
 }
 .footer {
     background: #000000;
-
     &__container {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -505,17 +499,17 @@ font-weight: 400;
         line-height: 36px;
 
         color: #CACACA;
-    }
-    &__link:hover {
-        color: $orangeColor1;
-    }
-    &__link:focus {
-        padding: 2px;
-        border: 1px solid $orangeColor1;
-    }
-    &__link:active {
-        border:none;
-        color: $orangeColor3;
+        &:hover {
+            color: $orangeColor1;
+        }
+        &:focus {
+            padding: 2px;
+            border: 1px solid $orangeColor1;
+        }
+        &:active {
+            border:none;
+            color: $orangeColor3;
+        }
     }
     &__social {
         max-width: 252px;
@@ -524,18 +518,17 @@ font-weight: 400;
     }
     &__soc-log {
         margin-right: 21px;
+        &:hover{
+            fill: $orangeColor1;
+        }
+        &:focus{
+            outline: 1px solid $orangeColor1;
+        }
+        &:active{
+            outline:none;
+            fill: $orangeColor3;
+        }
     }
-    &__soc-log:hover{
-        fill: $orangeColor1;
-    }
-    &__soc-log:focus{
-        outline: 1px solid $orangeColor1;
-    }
-    &__soc-log:active{
-        outline:none;
-        fill: $orangeColor3;
-    }
-
     &__center {
         transform: translateX(10px);
         margin-right: 20px;
@@ -569,20 +562,20 @@ font-weight: 400;
         &_big:placeholder-shown {
             padding-top: 20px;
         }
-    }
-    &__input:hover{
-        background: $grayColor4;
-    }
-    &__input:focus{
-        background: $grayColor4;
-    }
-    &__input:active{
-        background: $grayColor4;
-        color: $grayColor1;
-    }
-    &__input::placeholder {
-        padding-left: 14px;
-        font-size: 16px;
+        &:hover{
+            background: $grayColor4;
+        }
+        &:focus{
+            background: $grayColor4;
+        }
+        &:active{
+            background: $grayColor4;
+            color: $grayColor1;
+        }
+        &::placeholder {
+            padding-left: 14px;
+            font-size: 16px;
+        }
     }
     &__btn {
         display: block;
@@ -605,8 +598,7 @@ font-weight: 400;
     }
 }
 
-@media (max-width: 1024px) {
-    
+@media (max-width: 1024px) {  
     .container {
         max-width: 1024px;
         padding-left: 50px;
@@ -623,7 +615,6 @@ font-weight: 400;
         &__icon-burger{
             display: block;
             fill:$grayColor6;
-
         }
         &__logo {
             margin: 26px 0;
@@ -631,7 +622,7 @@ font-weight: 400;
             margin-top: 26px;
         }
         &__center-part {
-        display: none;
+            display: none;
         }
     }
     .section-hero {
@@ -640,6 +631,7 @@ font-weight: 400;
             min-height: 668px;
             height: 100%;
             padding: 160px 77px 28px;
+
             background: url(/img/media-1024/hero-slider1.jpg) no-repeat center center;
             background-size: cover;
         }
@@ -702,7 +694,6 @@ font-weight: 400;
             flex: 1 0 70%;
             transform: translateX(0);
             margin-left: 0;
-
         }
     }
     .section-working {
@@ -728,13 +719,10 @@ font-weight: 400;
             background: url('../../img/media-1024/working-step1.jpg') no-repeat center center;
             background-size: cover;
         }
-
     }
     .section-faq  {
         margin-bottom: 80px;
         &__topic {
-            //padding-top: 10px;
-            //min-height: 100px;
             padding: 29px 0;
         }
         &__small-heading {
@@ -792,9 +780,8 @@ font-weight: 400;
             border-radius: 22px;
         }
         &__heading {
-        font-size: 50px;
-        line-height: 61px;
-        //letter-spacing: 0.4px;
+            font-size: 50px;
+            line-height: 61px;
         }
         &__description {
             max-width: 590px;
@@ -802,10 +789,8 @@ font-weight: 400;
             line-height: 22px;
         }
         &__nav {
-            //padding-top: 115px;
         }
         &__swicth {
-            //transform: translateX(10px);
         }
     }
     .section-about {
@@ -843,7 +828,6 @@ font-weight: 400;
             flex: 1 1 30%;
         }
         &__info {
-
             flex: 1 1 70%;
             max-width: 452px;
             margin-left: 0;
@@ -862,7 +846,6 @@ font-weight: 400;
                 line-height: 32px;
             }    
         }
-        
     }
     .section-working {
         margin-bottom: 48px;
@@ -881,8 +864,6 @@ font-weight: 400;
             margin-top: 25px;
         }
         &__bottom {
-            //display: flex;
-            //justify-content: space-between;
             flex-direction: column-reverse;
         }    
         &__right {
@@ -890,6 +871,7 @@ font-weight: 400;
             margin-bottom: 34px;
             min-height: 286px;
             max-width: 668px;
+
             background: url('../../img/media-768/working-step1.jpg') no-repeat center center;
             background-size: cover;
             border-radius: 24px;
@@ -939,13 +921,10 @@ font-weight: 400;
         }
     }
 }
-@media (max-width: 576px) {
-
-}
-@media (max-width: 320px) {
+@media (max-width: 500px) {
     .container {
         max-width: 100%;
-        padding: 0 14px 0 15px;
+        padding: 0 15px;
     }
     .heading {
         font-size: 24px;
@@ -959,16 +938,17 @@ font-weight: 400;
         margin-bottom: 30px;
         border-radius: 18px;
         &__left-part{
+            flex: 1 1 66.6%;
             transform: translateY(0x);
         }
         &__logo {
             margin: 23px 0 13px;
             max-width: 110px;
             max-height: 35px;
-            transform: translateY(-4px);
+            transform: translate(-10px, -4px);
         }
         &__right-part {
-            flex: 0 1 30%;
+            flex: 1 1 33.3%;
             transform: translateY(0px);
         }
     }
@@ -1082,7 +1062,7 @@ font-weight: 400;
             margin: 0;
             padding: 0;
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
             border: none;
         }
         &__img {
@@ -1231,6 +1211,10 @@ font-weight: 400;
         }
     }
 }
-
-//Проверить пиксель перфект для большого разрешения и 3ех брейкпойнтов
-//Сделать правным переход между 320 и 760. Сверстать точку на 576px - это как раз между ними 
+@media (max-width: 320px) {
+    .header {
+        &__logo {
+            transform: translate(10px, -4px);
+        }
+    }
+}
