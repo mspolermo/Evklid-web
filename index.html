@@ -7,6 +7,11 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/style.css">
   <title>Проектные системы</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
   <header>
@@ -45,15 +50,30 @@
   <main>
     <section class="section-hero">
       <div class="container section-hero__container">
+        
         <div class="section-hero__body">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide swiper-slide_first">
+                
+              </div>
+              <div class="swiper-slide swiper-slide_second"></div>
+              <div class="swiper-slide swiper-slide_third"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            
+          </div>
           <h1 class="section-hero__heading">Проектные решения любой сложности</h1>
           <p class="section-hero__description">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
           <button class="btn section-hero__btn">Заказать расчёт</button>
-          <nav class="section-hero__nav">
+          <!-- <nav class="section-hero__nav">
             <div class="section-hero__swicth section-hero__swicth_active"></div>
             <div class="section-hero__swicth"></div>
             <div class="section-hero__swicth"></div>
-          </nav>
+          </nav> -->
         </div>
       </div>
     </section>
@@ -205,5 +225,6 @@
       </div>
     </section>
   </footer>
+  <script src="./js/main.js"></script>
 </body>
 </html>

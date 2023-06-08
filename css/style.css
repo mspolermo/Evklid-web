@@ -160,6 +160,45 @@ body {
   color: #000000;
 }
 
+.swiper {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 32px;
+}
+
+.swiper-slide {
+  background-size: cover !important;
+}
+.swiper-slide_first {
+  background: url(/img/hero-slider1.jpg) no-repeat center center;
+}
+.swiper-slide_second {
+  background: url(/img/hero-slider2.jpg) no-repeat center center;
+}
+.swiper-slide_third {
+  background: url(/img/hero-slider3.jpg) no-repeat center center;
+}
+
+.swiper-pagination {
+  padding-bottom: 20px;
+}
+
+.swiper-pagination-bullet {
+  margin-right: 20px !important;
+  -webkit-transform: translateX(12px) !important;
+          transform: translateX(12px) !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  background: white !important;
+}
+.swiper-pagination-bullet-active {
+  background: #FFFFFF !important;
+}
+
 .header {
   margin-bottom: 50px;
   background: #FFFFFF;
@@ -261,13 +300,13 @@ body {
   margin-bottom: 50px;
 }
 .section-hero__body {
+  position: relative !important;
   min-height: 620px;
   padding: 101px 20px 28px 80px;
-  background: url(/img/hero-slider1.jpg) no-repeat center center;
-  background-size: cover;
-  border-radius: 32px;
 }
 .section-hero__heading {
+  position: relative;
+  z-index: 1;
   max-width: 837px;
   font-weight: 800;
   font-size: 70px;
@@ -276,6 +315,8 @@ body {
   color: #FFFFFF;
 }
 .section-hero__description {
+  position: relative;
+  z-index: 1;
   max-width: 790px;
   padding: 23px 0 90px;
   font-weight: 600;
@@ -285,7 +326,10 @@ body {
   color: #FFFFFF;
 }
 .section-hero__btn {
+  position: relative;
+  z-index: 1;
   padding: 25px 39px 24px 40px;
+  margin-bottom: 55px;
   font-weight: 600;
   font-size: 23px;
   line-height: 29px;
@@ -293,27 +337,6 @@ body {
   letter-spacing: 0.2px;
   color: #FFFFFF;
   background: #FF9900;
-}
-.section-hero__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 55px;
-}
-.section-hero__swicth {
-  margin-right: 20px;
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-}
-.section-hero__swicth_active {
-  background: #FFFFFF;
 }
 
 .section-about {
@@ -791,6 +814,15 @@ body {
     padding-left: 50px;
     padding-right: 50px;
   }
+  .swiper-slide_first {
+    background: url(/img/media-1024/hero-slider1.jpg) no-repeat center center;
+  }
+  .swiper-slide_second {
+    background: url(/img/media-1024/hero-slider2.jpg) no-repeat center center;
+  }
+  .swiper-slide_third {
+    background: url(/img/media-1024/hero-slider3.jpg) no-repeat center center;
+  }
   .header {
     margin-bottom: 40px;
   }
@@ -827,8 +859,6 @@ body {
     min-height: 668px;
     height: 100%;
     padding: 160px 77px 28px;
-    background: url(/img/media-1024/hero-slider1.jpg) no-repeat center center;
-    background-size: cover;
   }
   .section-hero__heading {
     font-size: 60px;
@@ -841,13 +871,6 @@ body {
     padding: 16px 0 60px;
     font-size: 20px;
     line-height: 24px;
-  }
-  .section-hero__nav {
-    padding-top: 115px;
-  }
-  .section-hero__swicth {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
   }
   .section-about {
     margin-bottom: 82px;
@@ -966,6 +989,18 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .swiper {
+    border-radius: 22px;
+  }
+  .swiper-slide_first {
+    background: url(/img/media-768/hero-slider1.jpg) no-repeat center center;
+  }
+  .swiper-slide_second {
+    background: url(/img/media-768/hero-slider2.jpg) no-repeat center center;
+  }
+  .swiper-slide_third {
+    background: url(/img/media-768/hero-slider3.jpg) no-repeat center center;
+  }
   .header {
     margin-top: -2px;
     margin-bottom: 39px;
@@ -992,12 +1027,9 @@ body {
   }
   .section-hero__body {
     padding: 160px 40px 16px;
-    background: url(/img/media-768/hero-slider1.jpg) no-repeat center center;
-    background-size: cover;
     min-height: 662px !important;
     -webkit-transform: translateY(1px);
             transform: translateY(1px);
-    border-radius: 22px;
   }
   .section-hero__heading {
     font-size: 50px;
@@ -1175,6 +1207,30 @@ body {
     font-size: 14px;
     line-height: 28px;
   }
+  .swiper {
+    border-radius: 14px;
+  }
+  .swiper-slide_first {
+    background: url(/img/media-320/hero-slider1.jpg) no-repeat center center;
+  }
+  .swiper-slide_second {
+    background: url(/img/media-320/hero-slider2.jpg) no-repeat center center;
+  }
+  .swiper-slide_third {
+    background: url(/img/media-320/hero-slider3.jpg) no-repeat center center;
+  }
+  .swiper-pagination {
+    padding-bottom: 6px !important;
+    -webkit-transform: translateX(5px) !important;
+            transform: translateX(5px) !important;
+  }
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    margin-right: 15px !important;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+  }
   .header {
     margin-bottom: 30px;
     border-radius: 18px;
@@ -1209,7 +1265,7 @@ body {
     min-height: 100% !important;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-    padding: 60px 21px 15px 22px;
+    padding: 60px 21px 0 22px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1220,9 +1276,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: url(/img/media-320/hero-slider1.jpg) no-repeat center center;
-    background-size: cover;
-    border-radius: 14px;
   }
   .section-hero__heading {
     font-weight: 800;
@@ -1240,16 +1293,10 @@ body {
   }
   .section-hero__btn {
     padding: 13px 28px;
+    margin-bottom: 60px;
     font-size: 12px;
     line-height: 15px;
     border-radius: 8px;
-  }
-  .section-hero__nav {
-    padding-top: 34px;
-  }
-  .section-hero__swicth {
-    max-width: 10px;
-    max-height: 10px;
   }
   .section-about {
     margin-bottom: 61px;
