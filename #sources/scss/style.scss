@@ -212,10 +212,6 @@ font-weight: 400;
 
         min-height: 620px;
         padding: 101px 20px 28px 80px;
-
-        // background: url(/img/hero-slider1.jpg) no-repeat center center;
-        // background-size: cover;
-        //border-radius: 32px;
     }
     &__heading {
         position: relative;
@@ -258,23 +254,6 @@ font-weight: 400;
         color: $grayColor1;
         background: $orangeColor1;
     }
-    // &__nav {
-    //     display: flex;
-    //     justify-content: center;
-    //     padding-top: 55px;
-    // }
-    // &__swicth {
-    //     margin-right: 20px;
-    //     transform: translateX(-20px);
-
-    //     width: 15px;
-    //     height: 15px;
-    //     border-radius: 50%;
-    //     background: rgba(255, 255, 255, 0.4);
-    //     &_active {
-    //         background: #FFFFFF;
-    //     }
-    // }
 }
 .section-about {
     margin-bottom: 100px;
@@ -338,7 +317,7 @@ font-weight: 400;
         line-height: 32px;
         letter-spacing: 0.12px;
 
-        color: #FFFFFF;
+        color: $grayColor1;
         &_mobile{
             display: none;
         }
@@ -383,11 +362,11 @@ font-weight: 400;
         padding: 20px 76px 20px 18px;
         min-height: 295px;
 
-        border: 1px solid #CACACA;
+        border: 1px solid $grayColor2;
         border-radius: 32px;
-    }
-    &__block:first-child {
-        margin-bottom: 30px;
+        &:first-child {
+            margin-bottom: 30px;
+        }
     }
     &__img {
         max-width: 190px;
@@ -424,7 +403,7 @@ font-weight: 400;
     &__link {
         font-size: 18px;
         line-height: 22px;
-        color: #000000;
+        color: $grayColor6;
         &_active {
             color: $orangeColor3;
         }
@@ -468,7 +447,7 @@ font-weight: 400;
     }
     &__btn {
         margin-right: 30px;
-        background: #FF9900;
+        background: $orangeColor1;
         transform: translateY(-3px);
         &_additional{
             font-weight: 500;
@@ -528,8 +507,8 @@ font-weight: 400;
         min-height: 111px;
 
         border: none !important;
-        border-top: 1px solid #CACACA !important;
-        border-bottom: 1px solid #CACACA !important;
+        border-top: 1px solid $grayColor2 !important;
+        border-bottom: 1px solid $grayColor2 !important;
     }
     &__small-heading {
         flex: 0 0 90%;
@@ -552,13 +531,12 @@ font-weight: 400;
     }
 }
 .footer {
-    background: #000000;
+    background: $grayColor6;
     &__container {
         padding-top: 50px;
         padding-bottom: 50px;
         display: flex;
         justify-content: space-between;
-        
     }
     &__left {
         flex: 0 1 32%;
@@ -576,7 +554,7 @@ font-weight: 400;
         font-size: 18px;
         line-height: 36px;
 
-        color: #CACACA;
+        color: $grayColor2;
         &:hover {
             color: $orangeColor1;
         }
@@ -616,7 +594,7 @@ font-weight: 400;
     }
     &__header {
         padding: 0 0 25px 0;
-        color: #CACACA;
+        color: $grayColor2;
     }
     &__form {
         margin-right: 15px;
@@ -660,7 +638,7 @@ font-weight: 400;
         margin-left: auto; 
         margin-right: auto;
         padding: 20px 52px 18px;
-        background: #FF9900;
+        background: $orangeColor1;
     }
     &__right {
         flex: 0 1 22%;
@@ -672,7 +650,7 @@ font-weight: 400;
         max-width: 363px;
         font-size: 16px;
         line-height: 32px;
-        color: #CACACA;
+        color: $grayColor2;
     }
 }
 
@@ -720,9 +698,6 @@ font-weight: 400;
             min-height: 668px;
             height: 100%;
             padding: 160px 77px 28px;
-
-            // background: url(/img/media-1024/hero-slider1.jpg) no-repeat center center;
-            // background-size: cover;
         }
         &__heading {
         font-size: 60px;
@@ -876,11 +851,8 @@ font-weight: 400;
         margin-bottom: 36px;
         &__body {
             padding: 160px 40px 16px;
-            // background: url(/img/media-768/hero-slider1.jpg) no-repeat center center;
-            // background-size: cover;
             min-height: 662px !important;
             transform: translateY(1px);
-            //border-radius: 22px;
         }
         &__heading {
             font-size: 50px;
@@ -891,10 +863,6 @@ font-weight: 400;
             font-size: 18px;
             line-height: 22px;
         }
-        // &__nav {
-        // }
-        // &__swicth {
-        // }
     }
     .section-about {
         margin-bottom: 80px;
@@ -1052,7 +1020,6 @@ font-weight: 400;
         }
     }
     .swiper-pagination {
-        //margin-top: 55px !important;
         padding-bottom: 6px !important;
         transform: translateX(5px) !important;
     }
@@ -1093,11 +1060,6 @@ font-weight: 400;
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            // background: url(/img/media-320/hero-slider1.jpg) no-repeat center center;
-            // background-size: cover;
-
-            // border-radius: 14px;
         }
         &__heading {
             font-weight: 800;
@@ -1123,13 +1085,6 @@ font-weight: 400;
 
             border-radius: 8px;
         }
-        // &__nav {
-        //     padding-top: 34px;
-        // }
-        // &__swicth{
-        //     max-width: 10px;
-        //     max-height: 10px;
-        // }
     }
     .section-about {
         margin-bottom: 61px;
@@ -1172,7 +1127,7 @@ font-weight: 400;
             font-weight: 400;
             font-size: 14px;
             line-height: 28px;
-            color: #000000;
+            color: $grayColor6;
         }
         &__btn {
             margin-bottom: 27px;
@@ -1278,7 +1233,6 @@ font-weight: 400;
             font-weight: 500;
             font-size: 14px;
             line-height: 24px;
-            //letter-spacing: 0.05px;
         }
         &__expand {
             flex: 0 0 15% !important;
