@@ -199,6 +199,26 @@ body {
   background: #FFFFFF !important;
 }
 
+.ui-state-hover {
+  background-color: #FFFFFF !important;
+}
+
+.ui-state-default {
+  background-color: #FFFFFF !important;
+}
+
+.ui-icon {
+  display: none !important;
+}
+
+.ui-state-active {
+  background-color: #FF9900 !important;
+}
+.ui-state-active .section-faq__expand {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .header {
   margin-bottom: 50px;
   background: #FFFFFF;
@@ -623,23 +643,27 @@ body {
   padding-bottom: 32px;
 }
 .section-faq__topic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
   min-height: 111px;
-  border-top: 1px solid #CACACA;
-  border-bottom: 1px solid #CACACA;
+  border: none !important;
+  border-top: 1px solid #CACACA !important;
+  border-bottom: 1px solid #CACACA !important;
 }
 .section-faq__small-heading {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 90%;
           flex: 0 0 90%;
+  letter-spacing: 1.25px;
   line-height: 32px;
 }
 .section-faq__expand {
@@ -647,6 +671,16 @@ body {
       -ms-flex: 0 0 3%;
           flex: 0 0 3%;
   min-width: 50px;
+}
+.section-faq__openingBlock {
+  max-height: 100% !important;
+  height: 100%;
+}
+.section-faq__openingBlock-text {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
 }
 
 .footer {
@@ -955,7 +989,7 @@ body {
     margin-bottom: 80px;
   }
   .section-faq__topic {
-    padding: 29px 0;
+    padding: 29px 0 !important;
   }
   .section-faq__small-heading {
     max-width: 756px;
@@ -1450,12 +1484,11 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    letter-spacing: 0.05px;
   }
   .section-faq__expand {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 15%;
-            flex: 0 0 15%;
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 15% !important;
+            flex: 0 0 15% !important;
     min-width: 30px;
     width: 30px;
     height: 30px;

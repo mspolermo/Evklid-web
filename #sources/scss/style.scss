@@ -33,7 +33,7 @@ font-weight: 400;
 
     text-align: center;
 
-    color: #FFFFFF;
+    color: $grayColor1;
     border-radius: 16px;
     &:hover{
         background: $orangeColor2
@@ -50,21 +50,21 @@ font-weight: 400;
     font-size: 48px;
     line-height: 59px;
 
-    color: #000000;
+    color: $grayColor6;
 }
 .text {
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
 
-    color: #000000;
+    color: $grayColor6;
 }
 .small-heading {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     
-    color: #000000;
+    color: $grayColor6;
 }
 .swiper {
     position: absolute !important;
@@ -74,7 +74,6 @@ font-weight: 400;
     height: 100% !important;
 
     border-radius: 32px;
-
   }
 .swiper-slide {
     background-size: cover !important;
@@ -89,7 +88,6 @@ font-weight: 400;
     }
 }
 .swiper-pagination {
-    //margin-top: 55px !important;
     padding-bottom: 20px;
 }
 .swiper-pagination-bullet {
@@ -101,15 +99,31 @@ font-weight: 400;
     border-radius: 50% !important;
     background: white !important;
     &-active {
-        background: #FFFFFF !important;
+        background: $grayColor1 !important;
     }
 }
-
+.ui-state-hover {
+    background-color: $grayColor1 !important;
+}
+.ui-state-default {
+    background-color: $grayColor1 !important;
+}
+.ui-icon {
+    display: none !important;
+}
+.ui-state-active {
+    background-color: $orangeColor1 !important;  
+    .section-faq {
+        &__expand {
+            transform: rotate(45deg);
+        }
+    }
+}
 
 .header {
     margin-bottom: 50px;
 
-    background: #FFFFFF;
+    background: $grayColor1;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 32px 32px;
     &__container {
@@ -213,7 +227,7 @@ font-weight: 400;
         line-height: 85px;
         letter-spacing: 0.05px;
 
-        color: #FFFFFF;
+        color: $grayColor1;
     }
     &__description {
         position: relative;
@@ -227,7 +241,7 @@ font-weight: 400;
         line-height: 29px;
         letter-spacing: 0.25px;
 
-        color: #FFFFFF;
+        color: $grayColor1;
     }
     &__btn {
         position: relative;
@@ -241,7 +255,7 @@ font-weight: 400;
     
         text-align: center;
         letter-spacing: 0.2px;
-        color: #FFFFFF;
+        color: $grayColor1;
         background: $orangeColor1;
     }
     // &__nav {
@@ -506,21 +520,35 @@ font-weight: 400;
     &__issues { 
     }
     &__topic {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
         min-height: 111px;
 
-        border-top: 1px solid #CACACA;
-        border-bottom: 1px solid #CACACA;
+        border: none !important;
+        border-top: 1px solid #CACACA !important;
+        border-bottom: 1px solid #CACACA !important;
     }
     &__small-heading {
         flex: 0 0 90%;
+        letter-spacing: 1.25px;
         line-height: 32px;
     }
     &__expand {
         flex: 0 0 3%;
         min-width: 50px;
+    }
+    &__openingBlock{
+        max-height: 100% !important;
+        height: 100%;
+    }
+    &__openingBlock-text{
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
     }
 }
 .footer {
@@ -784,7 +812,7 @@ font-weight: 400;
     .section-faq  {
         margin-bottom: 80px;
         &__topic {
-            padding: 29px 0;
+            padding: 29px 0 !important;
         }
         &__small-heading {
             max-width: 756px;
@@ -1250,10 +1278,10 @@ font-weight: 400;
             font-weight: 500;
             font-size: 14px;
             line-height: 24px;
-            letter-spacing: 0.05px;
+            //letter-spacing: 0.05px;
         }
         &__expand {
-            flex: 0 0 15%;
+            flex: 0 0 15% !important;
             min-width: 30px;
             width: 30px;
             height: 30px;
@@ -1320,3 +1348,4 @@ font-weight: 400;
         }
     }
 }
+
