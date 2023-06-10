@@ -211,14 +211,6 @@ body {
   display: none !important;
 }
 
-.ui-state-active {
-  background-color: #FF9900 !important;
-}
-.ui-state-active .section-faq__expand {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
 .header {
   margin-bottom: 50px;
   background: #FFFFFF;
@@ -675,6 +667,7 @@ body {
 .section-faq__openingBlock {
   max-height: 100% !important;
   height: 100%;
+  min-height: 100%;
 }
 .section-faq__openingBlock-text {
   margin-bottom: 10px;
@@ -1573,4 +1566,18 @@ body {
     -webkit-transform: translate(10px, -4px);
             transform: translate(10px, -4px);
   }
+}
+.ui-state-active:active {
+  background-color: #FF9900 !important;
+}
+.ui-state-active .section-faq__topic:active {
+  background-color: #FF9900 !important;
+}
+.ui-state-active .section-faq__expand {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.section-faq__topic:active {
+  border-color: #FF9900 !important;
 }
