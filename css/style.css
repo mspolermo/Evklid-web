@@ -200,15 +200,25 @@ body {
 }
 
 .ui-state-hover {
-  background-color: #FFFFFF !important;
+  background-color: transparent !important;
 }
 
 .ui-state-default {
-  background-color: #FFFFFF !important;
+  background-color: transparent !important;
 }
 
 .ui-icon {
   display: none !important;
+}
+
+.ui-state-active:active {
+  background-color: #FF9900 !important;
+}
+.ui-state-active .section-faq__expand {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.6s ease transform !important;
+  transition: 0.6s ease transform !important;
 }
 
 .header {
@@ -536,6 +546,7 @@ body {
 }
 .section-working__link:hover {
   color: #FF9900;
+  cursor: pointer;
 }
 .section-working__link:focus {
   padding: 2px;
@@ -554,9 +565,7 @@ body {
           justify-content: space-between;
 }
 .section-working__left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -568,6 +577,11 @@ body {
       -ms-flex: 0 0 49%;
           flex: 0 0 49%;
   max-width: 758px;
+}
+.section-working__left_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .section-working__small-heading {
   line-height: 32px;
@@ -651,6 +665,9 @@ body {
   border-top: 1px solid #CACACA !important;
   border-bottom: 1px solid #CACACA !important;
 }
+.section-faq__topic:active {
+  background-color: #FF9900 !important;
+}
 .section-faq__small-heading {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 90%;
@@ -663,6 +680,8 @@ body {
       -ms-flex: 0 0 3%;
           flex: 0 0 3%;
   min-width: 50px;
+  -webkit-transition: 0.6s ease transform !important;
+  transition: 0.6s ease transform !important;
 }
 .section-faq__openingBlock {
   max-height: 100% !important;
@@ -1566,18 +1585,4 @@ body {
     -webkit-transform: translate(10px, -4px);
             transform: translate(10px, -4px);
   }
-}
-.ui-state-active:active {
-  background-color: #FF9900 !important;
-}
-.ui-state-active .section-faq__topic:active {
-  background-color: #FF9900 !important;
-}
-.ui-state-active .section-faq__expand {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.section-faq__topic:active {
-  border-color: #FF9900 !important;
 }

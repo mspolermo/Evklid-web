@@ -104,15 +104,25 @@ font-weight: 400;
     }
 }
 .ui-state-hover {
-    background-color: $grayColor1 !important;
+    background-color: transparent !important;
 }
 .ui-state-default {
-    background-color: $grayColor1 !important;
+    background-color: transparent!important;
 }
 .ui-icon {
     display: none !important;
 }
-
+.ui-state-active {
+    &:active {
+        background-color: $orangeColor1 !important;
+    }  
+    .section-faq {  
+        &__expand {
+            transform: rotate(45deg);
+            transition: 0.6s ease transform !important;
+        }
+    }
+}
 
 .header {
     margin-bottom: 50px;
@@ -403,6 +413,7 @@ font-weight: 400;
         }
         &:hover{
             color: $orangeColor1;
+            cursor: pointer;
         }
         &:focus{
             padding: 2px;
@@ -418,11 +429,14 @@ font-weight: 400;
         justify-content: space-between;
     }
     &__left {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-between;
         flex: 0 0 49%;
         max-width: 758px;
+        &_active {
+            display: flex;
+        }
     }
     &__small-heading {
         line-height: 32px;
@@ -503,6 +517,9 @@ font-weight: 400;
         border: none !important;
         border-top: 1px solid $grayColor2 !important;
         border-bottom: 1px solid $grayColor2 !important;
+        &:active {
+            background-color: $orangeColor1 !important;
+        }
     }
     &__small-heading {
         flex: 0 0 90%;
@@ -512,6 +529,7 @@ font-weight: 400;
     &__expand {
         flex: 0 0 3%;
         min-width: 50px;
+        transition: 0.6s ease transform !important;
     }
     &__openingBlock{
         max-height: 100% !important;
@@ -1292,25 +1310,3 @@ font-weight: 400;
     }
 }
 
-.ui-state-active {
-    //background-color: $orangeColor1 !important;  
-    &:active {
-        background-color: $orangeColor1 !important;
-    }  
-    .section-faq {
-        &__topic:active {
-            background-color: $orangeColor1 !important;
-        }    
-        &__expand {
-            transform: rotate(45deg);
-        }
-    }
-    
-}
-.section-faq__topic:active {
-        border-color: $orangeColor1 !important;
-    }
-//     <div class="section-faq__topic ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-state-focus ui-state-hover ui-accordion-header-active ui-state-active" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>
-//             <h3 class="small-heading section-faq__small-heading">Из чего формируется конечная стоимость проекта?</h3>
-//             <svg class="section-faq__expand" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"></ellipse><path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"></path></svg>
-//           </div>
