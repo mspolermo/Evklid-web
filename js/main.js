@@ -21,9 +21,16 @@ document.querySelectorAll('.section-working__link').forEach(function(tubsBtn){
     })
     document.querySelector(`[data-path="${path}"]`).classList.add('section-working__link_active')
 
-    document.querySelectorAll('.section-working__left').forEach(function(tabContent){
-      tabContent.classList.remove('section-working__left_active')
+    document.querySelectorAll('.section-working__bottom').forEach(function(tabContent){
+      tabContent.classList.remove('section-working__bottom_active')
     })
-    document.querySelector(`[data-target="${path}"]`).classList.add('section-working__left_active')
+    document.querySelector(`[data-target="${path}"]`).classList.add('section-working__bottom_active')
   })
+})
+
+document.querySelector('#burgerBtn').addEventListener('click', function() {
+  document.querySelector('#burgerMenu').classList.add('burger__active')
+})
+document.querySelector('#burgerClose').addEventListener('click', function() {
+  document.querySelector('#burgerMenu').classList.remove('burger__active')
 })

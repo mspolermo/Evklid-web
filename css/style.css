@@ -318,6 +318,21 @@ body {
   stroke: #FF9900;
 }
 
+.burger {
+  height: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.6s ease transform !important;
+  transition: 0.6s ease transform !important;
+}
+.burger__active {
+  height: 100vh;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: 0.6s ease transform !important;
+  transition: 0.6s ease transform !important;
+}
+
 .section-hero {
   margin-bottom: 50px;
 }
@@ -557,15 +572,20 @@ body {
   color: #E1670E;
 }
 .section-working__bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.section-working__bottom_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .section-working__left {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -577,11 +597,6 @@ body {
       -ms-flex: 0 0 49%;
           flex: 0 0 49%;
   max-width: 758px;
-}
-.section-working__left_active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 .section-working__small-heading {
   line-height: 32px;
@@ -631,22 +646,37 @@ body {
           flex: 0 1 50%;
   max-width: 870px;
   width: 100%;
+  min-height: 460px;
   margin-top: 8px;
-  background: url("../../img/working-step1.jpg") no-repeat center center;
   background-size: cover;
   border-radius: 32px;
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
+.section-working__right_first {
+  background: url("../../img/working-step1.jpg") no-repeat center center;
+}
+.section-working__right_second {
+  background: url("../../img/working-step2.jpg") no-repeat center center;
+}
+.section-working__right_third {
+  background: url("../../img/working-step3.jpg") no-repeat center center;
+}
+.section-working__right_fourth {
+  background: url("../../img/working-step4.jpg") no-repeat center center;
+}
 
 .section-faq {
-  margin-bottom: 98px;
+  margin-bottom: 97px;
 }
 .section-faq br {
   display: none;
 }
 .section-faq__heading {
   padding-bottom: 32px;
+}
+.section-faq__issues {
+  border-bottom: 1px solid #CACACA !important;
 }
 .section-faq__topic {
   margin: 0 !important;
@@ -663,7 +693,7 @@ body {
   min-height: 111px;
   border: none !important;
   border-top: 1px solid #CACACA !important;
-  border-bottom: 1px solid #CACACA !important;
+  border-radius: 0 !important;
 }
 .section-faq__topic:active {
   background-color: #FF9900 !important;
@@ -684,9 +714,7 @@ body {
   transition: 0.6s ease transform !important;
 }
 .section-faq__openingBlock {
-  max-height: 100% !important;
-  height: 100%;
-  min-height: 100%;
+  border: none !important;
 }
 .section-faq__openingBlock-text {
   margin-bottom: 10px;
@@ -898,6 +926,32 @@ body {
   .header__center-part {
     display: none;
   }
+  .burger {
+    margin-top: -140px;
+    position: absolute;
+    width: 420px;
+    z-index: 3;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 32px 32px;
+  }
+  .burger__container {
+    height: 100%;
+  }
+  .burger__close {
+    margin-top: 38px;
+    margin-bottom: 107px;
+  }
+  .burger__item {
+    margin-bottom: 60px;
+  }
+  .burger__link {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+  }
   .section-hero {
     margin-bottom: 34px;
   }
@@ -994,8 +1048,20 @@ body {
   }
   .section-working__right {
     max-width: 437px;
-    background: url("../../img/media-1024/working-step1.jpg") no-repeat center center;
+    min-height: 694px;
     background-size: cover;
+  }
+  .section-working__right_first {
+    background: url("../../img/media-1024/working-step1.jpg") no-repeat center center;
+  }
+  .section-working__right_second {
+    background: url("../../img/media-1024/working-step2.jpg") no-repeat center center;
+  }
+  .section-working__right_third {
+    background: url("../../img/media-1024/working-step3.jpg") no-repeat center center;
+  }
+  .section-working__right_fourth {
+    background: url("../../img/media-1024/working-step4.jpg") no-repeat center center;
   }
   .section-faq {
     margin-bottom: 80px;
@@ -1067,6 +1133,14 @@ body {
   .header__icon-search {
     -webkit-transform: translateY(2px);
             transform: translateY(2px);
+  }
+  .burger {
+    margin-top: -108px;
+    width: 420px;
+  }
+  .burger__close {
+    margin-top: 22px;
+    margin-bottom: 105px;
   }
   .section-hero {
     margin-bottom: 36px;
@@ -1180,9 +1254,20 @@ body {
     margin-bottom: 34px;
     min-height: 286px;
     max-width: 668px;
-    background: url("../../img/media-768/working-step1.jpg") no-repeat center center;
     background-size: cover;
     border-radius: 24px;
+  }
+  .section-working__right_first {
+    background: url("../../img/media-768/working-step1.jpg") no-repeat center center;
+  }
+  .section-working__right_second {
+    background: url("../../img/media-768/working-step2.jpg") no-repeat center center;
+  }
+  .section-working__right_third {
+    background: url("../../img/media-768/working-step3.jpg") no-repeat center center;
+  }
+  .section-working__right_fourth {
+    background: url("../../img/media-768/working-step4.jpg") no-repeat center center;
   }
   .section-working__item {
     -webkit-box-flex: 1 !important;
@@ -1197,7 +1282,7 @@ body {
             transform: translateX(0);
   }
   .section-faq {
-    margin-bottom: 114px;
+    margin-bottom: 117px;
   }
   .section-faq__expand {
     -webkit-box-flex: 0;
@@ -1301,6 +1386,21 @@ body {
             flex: 1 1 33.3%;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+  .burger {
+    margin-top: -99px;
+    width: 100%;
+  }
+  .burger__close {
+    margin-top: 22px;
+    margin-bottom: 32px;
+  }
+  .burger__item {
+    margin-bottom: 32px;
+  }
+  .burger__link {
+    font-size: 16px;
+    line-height: 20px;
   }
   .section-hero {
     margin-bottom: 60px;
@@ -1436,11 +1536,24 @@ body {
     line-height: 17px;
   }
   .section-working__right {
-    margin-bottom: 13px;
-    min-height: 160px;
-    background: url("../../img/media-320/working-step1.jpg") no-repeat center center;
+    margin-top: 0;
+    margin-bottom: 34px;
+    min-height: 286px;
+    max-width: 668px;
     background-size: cover;
-    border-radius: 14px;
+    border-radius: 24px;
+  }
+  .section-working__right_first {
+    background: url("../../img/media-768/working-step1.jpg") no-repeat center center;
+  }
+  .section-working__right_second {
+    background: url("../../img/media-768/working-step2.jpg") no-repeat center center;
+  }
+  .section-working__right_third {
+    background: url("../../img/media-768/working-step3.jpg") no-repeat center center;
+  }
+  .section-working__right_fourth {
+    background: url("../../img/media-768/working-step4.jpg") no-repeat center center;
   }
   .section-working__small-heading {
     font-weight: 600;
@@ -1481,7 +1594,7 @@ body {
             transform: translate(0px, -3px);
   }
   .section-faq {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
   }
   .section-faq br {
     display: block;
@@ -1584,5 +1697,23 @@ body {
   .header__logo {
     -webkit-transform: translate(10px, -4px);
             transform: translate(10px, -4px);
+  }
+  .section-working__right {
+    margin-bottom: 13px;
+    min-height: 160px;
+    background-size: cover;
+    border-radius: 14px;
+  }
+  .section-working__right_first {
+    background: url("../../img/media-320/working-step1.jpg") no-repeat center center;
+  }
+  .section-working__right_second {
+    background: url("../../img/media-320/working-step2.jpg") no-repeat center center;
+  }
+  .section-working__right_third {
+    background: url("../../img/media-320/working-step3.jpg") no-repeat center center;
+  }
+  .section-working__right_fourth {
+    background: url("../../img/media-320/working-step4.jpg") no-repeat center center;
   }
 }

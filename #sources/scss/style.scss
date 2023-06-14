@@ -207,6 +207,18 @@ font-weight: 400;
         }
     }
 }
+.burger {
+    //display: none;
+    height: 0;
+    transform: translateX(-100%);
+    transition: 0.6s ease transform !important;
+    &__active {
+        height: 100vh;
+        //display: block;
+        transform: translateX(0%);
+        transition: 0.6s ease transform !important;
+    }
+}
 .section-hero {
     margin-bottom: 50px;
     &__container {
@@ -425,18 +437,18 @@ font-weight: 400;
         }
     }
     &__bottom {
-        display: flex;
+        display: none;
         justify-content: space-between;
+        &_active {
+            display: flex;
+        }
     }
     &__left {
-        display: none;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         flex: 0 0 49%;
         max-width: 758px;
-        &_active {
-            display: flex;
-        }
     }
     &__small-heading {
         line-height: 32px;
@@ -486,25 +498,40 @@ font-weight: 400;
         flex: 0 1 50%;
         max-width: 870px;
         width: 100%;
+        min-height: 460px;
         margin-top: 8px;
 
-        background: url('../../img/working-step1.jpg') no-repeat center center;
+        
         background-size: cover;
         border-radius: 32px;
         transform: translateY(-3px);
+        &_first {
+            background: url('../../img/working-step1.jpg') no-repeat center center;    
+        }
+        &_second {
+            background: url('../../img/working-step2.jpg') no-repeat center center;   
+        }
+        &_third {
+            background: url('../../img/working-step3.jpg') no-repeat center center;   
+        }
+        &_fourth {
+            background: url('../../img/working-step4.jpg') no-repeat center center;   
+        }
     }
 }
 .section-faq {
-    margin-bottom: 98px;
+    margin-bottom: 97px;
     br {
         display: none;
     }
     &__container {
+        
     }
     &__heading {
         padding-bottom: 32px;
     }
     &__issues { 
+        border-bottom: 1px solid $grayColor2 !important; 
     }
     &__topic {
         margin: 0 !important;
@@ -516,7 +543,7 @@ font-weight: 400;
 
         border: none !important;
         border-top: 1px solid $grayColor2 !important;
-        border-bottom: 1px solid $grayColor2 !important;
+        border-radius: 0 !important;
         &:active {
             background-color: $orangeColor1 !important;
         }
@@ -532,9 +559,10 @@ font-weight: 400;
         transition: 0.6s ease transform !important;
     }
     &__openingBlock{
-        max-height: 100% !important;
-        height: 100%;
-        min-height: 100%;
+        //max-height: 100% !important;
+        //height: 100%;
+        //min-height: 100%;
+        border: none !important;
     }
     &__openingBlock-text{
         margin-bottom: 10px;
@@ -705,6 +733,35 @@ font-weight: 400;
             display: none;
         }
     }
+    .burger {
+        margin-top: -140px;
+        position: absolute;
+        width: 420px;
+        
+        z-index: 3; 
+        background: #FFFFFF;
+        box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 0px 32px 32px;
+        &__container{
+            height: 100%;  
+        }
+        &__close {
+            margin-top: 38px;
+            margin-bottom: 107px;
+        }
+        &__list {
+        }
+        &__item {
+            margin-bottom: 60px;
+            
+        }
+        &__link {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #333333;
+        }
+    }
     .section-hero {
         margin-bottom: 34px;
         &__body {
@@ -787,8 +844,20 @@ font-weight: 400;
         }
         &__right {
             max-width: 437px;
-            background: url('../../img/media-1024/working-step1.jpg') no-repeat center center;
+            min-height: 694px;
             background-size: cover;
+            &_first {
+                background: url('../../img/media-1024/working-step1.jpg') no-repeat center center;  
+            }
+            &_second {
+                background: url('../../img/media-1024/working-step2.jpg') no-repeat center center; 
+            }
+            &_third {
+                background: url('../../img/media-1024/working-step3.jpg') no-repeat center center; 
+            }
+            &_fourth {
+                background: url('../../img/media-1024/working-step4.jpg') no-repeat center center; 
+            }
         }
     }
     .section-faq  {
@@ -852,6 +921,14 @@ font-weight: 400;
         }
         &__icon-search{
             transform: translateY(2px);
+        }
+    }
+    .burger {
+        margin-top: -108px;
+        width: 420px;
+        &__close {
+            margin-top: 22px;
+            margin-bottom: 105px;
         }
     }
     .section-hero {
@@ -950,9 +1027,20 @@ font-weight: 400;
             min-height: 286px;
             max-width: 668px;
 
-            background: url('../../img/media-768/working-step1.jpg') no-repeat center center;
             background-size: cover;
             border-radius: 24px;
+            &_first {
+                background: url('../../img/media-768/working-step1.jpg') no-repeat center center; 
+            }
+            &_second {
+                background: url('../../img/media-768/working-step2.jpg') no-repeat center center; 
+            }
+            &_third {
+                background: url('../../img/media-768/working-step3.jpg') no-repeat center center;  
+            }
+            &_fourth {
+                background: url('../../img/media-768/working-step4.jpg') no-repeat center center; 
+            }
         }
         &__item {
             flex: 1 1 25% !important;
@@ -964,7 +1052,7 @@ font-weight: 400;
         }
     }
     .section-faq {
-        margin-bottom: 114px;
+        margin-bottom: 117px;
         &__expand {
             flex: 0 0 7%;
             &_third {
@@ -1053,6 +1141,21 @@ font-weight: 400;
         &__right-part {
             flex: 1 1 33.3%;
             transform: translateY(0px);
+        }
+    }
+    .burger {
+        margin-top: -99px;
+        width: 100%;
+        &__close {
+            margin-top: 22px;
+            margin-bottom: 32px;
+        }
+        &__item {
+            margin-bottom: 32px;
+        }
+        &__link {
+            font-size: 16px;
+            line-height: 20px;
         }
     }
     .section-hero {
@@ -1184,12 +1287,25 @@ font-weight: 400;
             line-height: 17px;
         }
         &__right {
-            margin-bottom: 13px;
-            min-height: 160px;
+            margin-top: 0;
+            margin-bottom: 34px;
+            min-height: 286px;
+            max-width: 668px;
 
-            background: url('../../img/media-320/working-step1.jpg') no-repeat center center;
             background-size: cover;
-            border-radius: 14px;
+            border-radius: 24px;
+            &_first {
+                background: url('../../img/media-768/working-step1.jpg') no-repeat center center; 
+            }
+            &_second {
+                background: url('../../img/media-768/working-step2.jpg') no-repeat center center; 
+            }
+            &_third {
+                background: url('../../img/media-768/working-step3.jpg') no-repeat center center;  
+            }
+            &_fourth {
+                background: url('../../img/media-768/working-step4.jpg') no-repeat center center; 
+            }
         }
         &__small-heading {
             font-weight: 600;
@@ -1227,7 +1343,7 @@ font-weight: 400;
         }
     }
     .section-faq {
-        margin-bottom: 60px;
+        margin-bottom: 61px;
         br {
             display: block;
         }
@@ -1306,6 +1422,27 @@ font-weight: 400;
     .header {
         &__logo {
             transform: translate(10px, -4px);
+        }
+    }
+    .section-working {
+        &__right {
+            margin-bottom: 13px;
+            min-height: 160px;
+
+            background-size: cover;
+            border-radius: 14px;
+            &_first {
+                background: url('../../img/media-320/working-step1.jpg') no-repeat center center;
+            }
+            &_second {
+                background: url('../../img/media-320/working-step2.jpg') no-repeat center center; 
+            }
+            &_third {
+                background: url('../../img/media-320/working-step3.jpg') no-repeat center center;  
+            }
+            &_fourth {
+                background: url('../../img/media-320/working-step4.jpg') no-repeat center center; 
+            }
         }
     }
 }
