@@ -46,7 +46,7 @@
           </ul>
         </div>
         <div class="header__right-part">
-          <svg class="header__icon-search" tabindex='0' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)"/><path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"/></svg>
+          <svg area-label="Найти" class="header__icon-search" tabindex='0' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)"/><path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"/></svg>
         </div>
       </div>
     </section>
@@ -318,9 +318,18 @@
         <div class="footer__center">
           <h2 class="heading footer__header">Оставить заявку</h2>
             <form class="footer__form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="" method="post">
-              <input class="footer__input" required="" type="text" name="name" placeholder='Фамилия, имя и отчество*' id="name">
-              <input class="footer__input" required="" type="email" name="email" placeholder="Email*" >
-              <textarea class="footer__input footer__input_big" type="text" name="text" placeholder="Сообщение"></textarea>
+              <label>
+                <span class="visually-hidden">Введите фимилию, имя и отчество</span>
+                <input class="footer__input" required="" type="text" name="name" placeholder='Фамилия, имя и отчество*' id="name">
+              </label>
+              <label>
+                <span class="visually-hidden">Введите e-mail</span>
+                <input class="footer__input" required="" type="email" name="email" placeholder="Email*" >
+              </label>
+              <label>
+                <span class="visually-hidden">Введите сообщение</span>
+                <textarea class="footer__input footer__input_big" type="text" name="text" placeholder="Сообщение"></textarea>
+              </label>
               <button class="btn footer__btn" type="submit" >Отправить данные</button>
             </form>
         </div>

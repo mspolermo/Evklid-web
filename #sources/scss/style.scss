@@ -66,6 +66,12 @@ font-weight: 400;
     
     color: $grayColor6;
 }
+.visually-hidden {
+    //класс для озвучивания screenReader, скрывыет подписи на визуале
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+}
 
 .swiper {
     position: absolute !important;
@@ -208,13 +214,11 @@ font-weight: 400;
     }
 }
 .burger {
-    //display: none;
     height: 0;
     transform: translateX(-100%);
     transition: 0.6s ease transform !important;
     &__active {
         height: 100vh;
-        //display: block;
         transform: translateX(0%);
         transition: 0.6s ease transform !important;
     }
@@ -739,7 +743,7 @@ font-weight: 400;
         width: 420px;
         
         z-index: 3; 
-        background: #FFFFFF;
+        background: $grayColor1;
         box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
         border-radius: 0px 0px 32px 32px;
         &__container{
@@ -759,7 +763,7 @@ font-weight: 400;
             font-weight: 700;
             font-size: 24px;
             line-height: 29px;
-            color: #333333;
+            color: $grayColor6;;
         }
     }
     .section-hero {
@@ -1102,7 +1106,7 @@ font-weight: 400;
     }
     .swiper {
         border-radius: 14px;
-      }
+    }
     .swiper-slide {
         &_first {
             background: url(/img/media-320/hero-slider1.jpg) no-repeat center center;
