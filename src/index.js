@@ -1,3 +1,8 @@
+import Swiper, { Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import './styles/style.scss'
 const swiper = new Swiper('.swiper', {
     loop: true,
