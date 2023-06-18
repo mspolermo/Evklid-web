@@ -4,13 +4,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import './styles/style.scss'
+
 const swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
+  modules: [Navigation, Pagination],
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
 });
 
 //Accordion
